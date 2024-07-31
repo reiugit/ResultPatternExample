@@ -1,18 +1,11 @@
 ﻿namespace ResultPatternExample.Extensions;
 
-internal static class PrintExtensions
+internal static class DividerPrintExtensions
 {
     public static Divider PrintNumbers(this Divider divider)
     {
         Console.WriteLine($"\nDivision: {divider.Dividend} / {divider.Divisor}");
 
         return divider;
-    }
-
-    public static T Print<T>(this T value)
-    {
-        Console.WriteLine(value);
-
-        return value;
     }
 }
