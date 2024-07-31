@@ -1,15 +1,14 @@
 # Result-Pattern Example
 
 <pre>
-    public TResult Match<TResult>(
-        Func<TValue, TResult> success,
-        Func<Error, TResult> failure)
-    {
-        return _isSuccess
-            ? success(_value!)
-            : failure(_error);
-    }
-
+public TResult Match<TResult>(
+    Func<TValue, TResult> success,
+    Func<Error, TResult> failure)
+{
+    return _isSuccess
+        ? success(_value!)
+        : failure(_error);
+}
 </pre>
 
 
