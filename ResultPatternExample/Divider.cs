@@ -4,19 +4,19 @@ namespace ResultPatternExample;
 
 internal class Divider
 {
-    private Divider(int dividend, int divisor)
+    private Divider(double dividend, double divisor)
     {
         Dividend = dividend;
         Divisor = divisor;
     }
 
-    public int Dividend { get; }
-    public int Divisor { get; }
+    public double Dividend { get; }
+    public double Divisor { get; }
 
-    public static Divider Create(int dividend, int divisor)
+    public static Divider Create(double dividend, double divisor)
         => new(dividend, divisor);
 
-    public Result<int> Divide() =>
+    public Result<double> Divide() =>
         Divisor != 0
         ? Dividend / Divisor
         : Errors.DivisionByZero;
